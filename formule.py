@@ -22,26 +22,5 @@ class Formule:
             raise ValueError('La periode doit être superieur a 0')
         self.periode = periode
 
-    def setAmplitude(self,amplitude):
-        self.amplitude = amplitude
-        
-    def setBruit(self,bruit):
-        self.bruit = bruit
-        
-    def getBruit(self,bruit):
-        return self.bruit
-    
-    def getPeriode(self):
-        return self.periode
-    
-    def getNom(self):
-        return self.nom
-
-    def setNom(self,nom):
-        self.nom = nom
-    
-    def getAmplitude(self):
-        return self.amplitude
-    
     def addFormule(self,formule):
         self.listeFormule.append(formule)

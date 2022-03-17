@@ -8,13 +8,7 @@ class Controleur:
     
     def addFormule(self,formule):
         self.listeFormule.append(formule)
-        
-    def getPeriode(self):
-        return self.peridode
-    
-    def setPeriode(self,peridode):
-        self.peridode = peridode
-        
+
     def calcul(self,nom_fichier):
         
         if os.path.exists(nom_fichier):
