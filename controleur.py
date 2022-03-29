@@ -10,7 +10,7 @@ class Controleur:
         self.taille = taille
         self.data_frame = None
     
-    def addFormule(self,formule):
+    def ajouter_formule(self,formule):
         self.liste_formule.append(formule)
 
     def calcul(self):
