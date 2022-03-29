@@ -1,5 +1,6 @@
 import math
 import random
+from select import select
 
 class FormuleMonoPeriode:
     
@@ -10,5 +11,8 @@ class FormuleMonoPeriode:
 
     def calcul(self,x):
         bruit= self.bruit*(random.random()-0.5)
-        y = math.sin(math.pi*2*(x/self.periode))*self.amplitude
+        if(self.periode == 0):
+            y = self.amplitude
+        else:
+            y = math.sin(math.pi*2*(x/self.periode))*self.amplitude
         return y + bruit
