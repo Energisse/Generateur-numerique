@@ -16,6 +16,10 @@ class Controleur:
     def calcul(self):
         liste_mesure = []
         liste_date = []
+        liste_nom_formule = []
+
+        for formule in self.liste_formule:
+            liste_nom_formule.append(formule.nom)
 
         date = datetime.now()
         for x in range(self.taille):
@@ -29,7 +33,7 @@ class Controleur:
             liste_date.append(date.strftime("%H:%M:%S %Y/%m/%d"))
             liste_mesure.append(liste_mesure_ligne)
             
-        self.data_frame = pd.DataFrame(liste_mesure, index = liste_date)
+        self.data_frame = pd.DataFrame(liste_mesure, index = liste_date,columns=liste_nom_formule)
         
     def afficher(self):
         with pd.option_context('display.max_rows', None, 'display.max_columns', None):

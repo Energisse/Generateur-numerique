@@ -1,4 +1,4 @@
-class FormuleMultiPeriode:
+class Formule:
     
     def __init__(self,nom = ""):
         self.nom = nom
