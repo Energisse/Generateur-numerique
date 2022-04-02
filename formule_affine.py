@@ -1,7 +1,5 @@
 import math
 import random
-from select import select
-from tkinter import Y
 
 class FormuleAffine:
     
